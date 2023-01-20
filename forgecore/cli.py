@@ -67,7 +67,7 @@ def django(managepy_args):
 )
 @click.argument("makemigrations_args", nargs=-1, type=click.UNPROCESSED)
 def makemigrations(makemigrations_args):
-    """Run Django makemigrations"""
+    """Alias to Django `makemigrations`"""
     result = Forge().manage_cmd("makemigrations", *makemigrations_args)
     if result.returncode:
         sys.exit(result.returncode)
@@ -80,7 +80,7 @@ def makemigrations(makemigrations_args):
 )
 @click.argument("migrate_args", nargs=-1, type=click.UNPROCESSED)
 def migrate(migrate_args):
-    """Run Django migrations"""
+    """Alias to Django `migrate`"""
     result = Forge().manage_cmd("migrate", *migrate_args)
     if result.returncode:
         sys.exit(result.returncode)
@@ -88,7 +88,7 @@ def migrate(migrate_args):
 
 @cli.command()
 def shell():
-    """Local Python/Django shell"""
+    """Alias to Django `shell`"""
     Forge().manage_cmd("shell")
 
 
