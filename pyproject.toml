@@ -27,8 +27,8 @@ forge = "forgecore.cli:cli"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-click = ">=7.0.0"
-python-dotenv = "<1.0.0"
+click = "*"
+python-dotenv = "*"
 
 [tool.poetry.dev-dependencies]
 black = "^22.3.0"
